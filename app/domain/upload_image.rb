@@ -9,7 +9,10 @@ class UploadImage
 
   def call
     return Error.new('unprocessable entity') unless image?
-    Image.create.tap { |img| img.file.attach(image) }
+    Image.create.tap do |img| 
+      img.file.attach(image)
+      ImageFormatsWorker.perform_async(img.id)
+    end
   end
 
 private 

@@ -29,9 +29,14 @@ gem 'bootsnap', '>= 1.1.0', require: false
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
 # gem 'rack-cors'
 
+gem "mini_magick"
+gem 'sidekiq'
+gem 'sidekiq-status'
+
 group :test do
   gem 'rspec-rails', '~> 3.7'
   gem 'json_matchers'
+  gem 'rspec-sidekiq'
 end
 
 group :development, :test do
