@@ -5,6 +5,7 @@ ruby '2.5.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.0'
+gem 'active_model_serializers'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 # Use Puma as the app server
@@ -30,6 +31,7 @@ gem 'bootsnap', '>= 1.1.0', require: false
 
 group :test do
   gem 'rspec-rails', '~> 3.7'
+  gem 'json_matchers'
 end
 
 group :development, :test do
