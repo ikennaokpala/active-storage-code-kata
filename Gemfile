@@ -37,6 +37,7 @@ group :test do
   gem 'rspec-rails', '~> 3.7'
   gem 'json_matchers'
   gem 'rspec-sidekiq'
+  gem 'simplecov', require: false
 end
 
 group :development, :test do
